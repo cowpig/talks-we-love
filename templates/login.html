@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Talks We Love - login</title>
+</head>
+<body>
+	{% if error %}
+	Incorrect username/password combo!
+	<br>
+	{% endif %}
+	<form action="register" method="post">
+        <p><input type="text" name="username"></p>
+        <p><input type="password" name="password"></p>
+        <p><input type="password_2" name="password_2"></p>
+        <p><input type="submit" value="Register"></p>
+    </form>
+
+    <form action="login" method="post">
+        <p><input type="text" name="username"></p>
+        <p><input type="password" name="password"></p>
+        <p><input type="submit" value="Login"></p>
+    </form>
+</body>
+</html>

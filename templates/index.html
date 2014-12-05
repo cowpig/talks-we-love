@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Talks We Love - login</title>
+</head>
+<body>
+	{% if logged_in %}
+	Logged in as {{ username }}
+	{% else %}
+    <form action="/login" method="post">
+        <p><input type=text name=username></p>
+        <p><input type=password name=password></p>
+        <p><input type=submit value=Login></p>
+    </form>
+    (<a href="/register"> register </a>)
+    {% endif %}
+</body>
+</html>
